@@ -1,0 +1,43 @@
+RewriteEngine On
+
+# Redirect routes with a trailing slash to the same route without the trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Static Routes
+RewriteRule ^$ index.php [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^register$ register.php [L]
+RewriteRule ^forgot_password$ forgot_password.php [L]
+RewriteRule ^settings$ settings.php [L]
+RewriteRule ^programs$ programs.php [L]
+RewriteRule ^program$ program.php [L]
+RewriteRule ^courses$ courses.php [L]
+RewriteRule ^exams$ exams.php [L]
+RewriteRule ^exam$ exam.php [L]
+RewriteRule ^start_exam$ start_exam.php [L]
+RewriteRule ^ongoing_exam$ ongoing_exam.php [L]
+RewriteRule ^pins$ pins.php [L]
+RewriteRule ^enroll_program$ enroll_program.php [L]
+RewriteRule ^enroll_exam$ enroll_exam.php [L]
+RewriteRule ^check_result$ check_result.php [L]
+RewriteRule ^get_certificate$ get_certificate.php [L]
+RewriteRule ^process_form$ process_form.php [L]
+RewriteRule ^exam_submitted$ exam_submitted.php [L]
+RewriteRule ^results$ results.php [L]
+RewriteRule ^check_result$ check_result.php [L]
+RewriteRule ^result$ result.php [L]
+RewriteRule ^result_analysis$ result_analysis.php [L]
+RewriteRule ^activate_account$ activate_account.php [L]
+RewriteRule ^certificates$ certificates.php [L]
+RewriteRule ^certificate$ certificate.php [L]
+
+# Dynamic Routes
+RewriteRule ^dashboard$ dashboard.php [L]
+RewriteRule ^profile$ profile.php [L]
+RewriteRule ^blog$ blog.php [L]
+RewriteRule ^reset_password reset_password.php?email=$1 [L]
+
+

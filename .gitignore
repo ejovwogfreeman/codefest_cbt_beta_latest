@@ -1,0 +1,13 @@
+# Ignore environment files
+.env
+
+# Ignore vendor folder (since it's re-installed with composer install)
+vendor/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
